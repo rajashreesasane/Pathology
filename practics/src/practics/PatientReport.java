@@ -597,9 +597,7 @@ public class PatientReport extends JDialog implements ActionListener{
 		try{
 			PreparedStatement ps = cc.prepareStatement(s);
 			ResultSet rs = ps.executeQuery();
-			rs.last();
-			cnt = rs.getRow();
-			rs.beforeFirst();
+			cnt = 50;
 			d = new String[cnt][6];
 			while(rs.next()){
 				d[r][c] = rs.getString("tname");
